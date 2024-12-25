@@ -1,0 +1,33 @@
+.hero {
+
+    @include breakpoint-up(large) {
+        display: grid;
+        align-items: center;
+    }
+    &__image {
+        background-image: url('/images/pexels-max-rahubovskiy-6957089_2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem;
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 1;
+            min-height: 25rem;
+        }
+    }
+    &__text {
+        text-align: center;
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 2;
+            padding-bottom: 20px;
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
